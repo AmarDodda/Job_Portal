@@ -1,7 +1,6 @@
-Use Case
-Instead of manually filling out the resume, we automate the process. This allows authors to easily apply for jobs.
+Use Case: Instead of manually filling out the resume, we automate the process. This allows authors to easily apply for jobs.
 
-Technology
+Technology ->
 FrontEnd: React.js
 Backend: Django or Node.js or Flask
 Database: MongoDB
@@ -19,6 +18,7 @@ Job Apply
 3.1 Upload the resume and crawl it.
 3.2 Make a prompt to check the details.
 3.3 Submit Confirmation.
+
 Admin Login Page
 
 4.1 Dashboard: Total Open jobs, Closed Jobs, Total Companies.
@@ -28,7 +28,9 @@ Admin Login Page
 Future Upliftment
 Chatbot for application filling.
 Model
+
 Collections: admin and user
+
 Admin:
 
 1.1 Jobs:
@@ -45,6 +47,7 @@ Username
 Password
 1.3 Jobs Applied: List the people who have applied to that Company Specific Job.
 1.4 Notification Card: Toast.
+
 User:
 
 2.1 User Signup:
@@ -63,6 +66,7 @@ Remember
 Forgot Password
 Signup
 Home Page
+
 Status No Login:
 
 Nav Bar: Job portal, Jobs, Companies, Search (Filters), Alerts, Log in.
