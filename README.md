@@ -77,12 +77,15 @@ Part 3: Footer.
 Post Login:
 
 Nav Bar: Job portal, Jobs, Companies, Search (Filters), Alerts, Logged-in Name and Update, Sign out.
+
 Page:
 Part 1: Statistics: Slider, Total available Jobs, Companies Available, Placed Status.
 Part 2: Companies logos (6 items).
 Part 3: Footer.
+
 Job Search Page
 Jobs: List All the jobs, Apply Button.
+
 A new page named upload resume.
 Upload Resume:
 Upload Resume Choose File
