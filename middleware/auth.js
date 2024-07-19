@@ -1,7 +1,7 @@
-const jwt = require('jsonwebtoken');
-const config = require('../utils/config');
-const User = require('../models/user');
-const Consumer = require('../models/consumer');
+import jwt from 'jsonwebtoken';
+import config from '../utils/config.js';
+import User from '../models/user.js';
+
 
 const auth = {
     // middleware to check if the user is authenticated has a valid token
@@ -22,22 +22,19 @@ const auth = {
                 const decodedToken = jwt.verify(token, config.JWT_SECRET);
                 console.log('Decoded Token:', decodedToken);
 
-            
-
                 // set the userId in the request object
                 request.userId = decodedToken.id;
 
                 // call the next middleware
                 next();
-            } catch(error) {
+            } catch (error) {
                 return response.status(401).json({ message: 'Invalid token' });
             }
         } catch (error) {
             response.status(500).json({ message: error.message });
         }
-
     },
-    
+
     // middleware to check if the user is an admin
     isAdmin: async (request, response, next) => {
         try {
@@ -48,7 +45,7 @@ const auth = {
             const user = await User.findById(userId);
 
             // If the user is not an admin, return an error
-            if(user.role !== 'admin') {
+            if (user.role !== 'admin') {
                 return response.status(403).json({ message: 'Forbidden' });
             }
 
@@ -58,7 +55,7 @@ const auth = {
             response.status(500).json({ message: error.message });
         }
     }
-}
+};
 
 // export the auth object
-module.exports = auth;
+export default auth;
